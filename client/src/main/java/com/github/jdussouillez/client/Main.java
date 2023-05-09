@@ -24,7 +24,7 @@ public class Main implements QuarkusApplication {
         pdfGrpcApiService.generate(reqs)
             .collect()
             .asList()
-            .invoke(bytes -> System.out.println("Result size: " + bytes))
+            .invoke(bytes -> System.out.println("Result: " + bytes))
             .replaceWithVoid()
             .await()
             .indefinitely();
