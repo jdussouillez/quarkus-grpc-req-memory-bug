@@ -3,6 +3,7 @@ package com.github.jdussouillez.server.rpc.service;
 import com.github.jdussouillez.api.grpc.FileChunk;
 import com.github.jdussouillez.api.grpc.PdfGrpcApiService;
 import com.github.jdussouillez.api.grpc.PdfRequest;
+import com.github.jdussouillez.server.rpc.interceptor.EnableGrpcErrorManagement;
 import com.github.jdussouillez.server.rpc.mapper.FileChunkMapper;
 import com.github.jdussouillez.server.rpc.mapper.PdfRequestMapper;
 import com.github.jdussouillez.server.service.PdfService;
@@ -12,6 +13,7 @@ import io.smallrye.mutiny.infrastructure.Infrastructure;
 import jakarta.inject.Inject;
 
 @GrpcService
+@EnableGrpcErrorManagement
 public class PdfApiService implements PdfGrpcApiService {
 
     @Inject
