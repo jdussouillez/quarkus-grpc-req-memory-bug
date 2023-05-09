@@ -8,6 +8,7 @@ import io.quarkus.runtime.QuarkusApplication;
 import io.quarkus.runtime.annotations.QuarkusMain;
 import io.smallrye.mutiny.Multi;
 import java.util.List;
+import java.util.stream.IntStream;
 
 @QuarkusMain
 public class Main implements QuarkusApplication {
@@ -17,14 +18,13 @@ public class Main implements QuarkusApplication {
 
     @Override
     public int run(final String... args) {
-        var data = List.of("FOO", "BAR", "BAZ");
-        var reqs = data.stream()
-            .map(d -> PdfRequest.newBuilder().setData(ByteString.copyFromUtf8(d)).build())
-            .toList();
-        pdfGrpcApiService.generate(Multi.createFrom().iterable(reqs))
+        var reqs = Multi.createFrom().range(0, 5)
+            .map(i -> String.valueOf(i).repeat(75))
+            .map(s -> PdfRequest.newBuilder().setData(ByteString.copyFromUtf8(s)).build());
+        pdfGrpcApiService.generate(reqs)
             .collect()
             .asList()
-            .invoke(bytes -> System.out.println("Result: " + bytes))
+            .invoke(bytes -> System.out.println("Result size: " + bytes))
             .replaceWithVoid()
             .await()
             .indefinitely();

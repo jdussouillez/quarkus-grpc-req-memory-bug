@@ -12,7 +12,7 @@ public class FileChunkMapper implements GrpcMapper<byte[], Collection<FileChunk>
     /**
      * Chunk size in bytes
      */
-    protected static final int CHUNK_SIZE = 2;
+    protected static final int CHUNK_SIZE = 50;
 
     @Override
     public Collection<FileChunk> toGrpc(final byte[] bytes) {
