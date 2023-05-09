@@ -1,0 +1,15 @@
+syntax = "proto3";
+package com.github.jdussouillez.api.grpc;
+
+option java_multiple_files = true;
+
+/**
+ * File chunk
+ */
+message FileChunk {
+
+    /**
+     * Content
+     */
+    bytes content = 1;
+}

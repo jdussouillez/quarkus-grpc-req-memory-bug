@@ -1,0 +1,28 @@
+syntax = "proto3";
+package com.github.jdussouillez.api.grpc;
+
+import "base.proto";
+
+option java_multiple_files = true;
+
+/**
+ * PDF service
+ */
+service PdfGrpcApiService {
+
+    /**
+     * Generate a PDF file
+     */
+    rpc Generate(stream PdfRequest) returns (stream FileChunk) {}
+}
+
+/**
+ * PDF request
+ */
+message PdfRequest {
+
+    /**
+     * Data chunk (XML)
+     */
+    bytes data = 2;
+}
