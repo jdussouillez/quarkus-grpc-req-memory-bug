@@ -7,8 +7,6 @@ import io.quarkus.grpc.GrpcClient;
 import io.quarkus.runtime.QuarkusApplication;
 import io.quarkus.runtime.annotations.QuarkusMain;
 import io.smallrye.mutiny.Multi;
-import java.util.List;
-import java.util.stream.IntStream;
 
 @QuarkusMain
 public class Main implements QuarkusApplication {
