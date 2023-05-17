@@ -102,3 +102,11 @@ Sending gRPC request of size 5250
 2023-05-17 13:47:44,119 ERROR [io.ver.cor.htt.imp.Http2UpgradeClientConnection] (vert.x-eventloop-thread-7) Connection was closed: io.vertx.core.VertxException: Connection was closed
 2023-05-17 13:47:48,033 INFO  [io.qua.grp.run.sup.Channels] (Shutdown thread) Shutting down Vert.x gRPC channel io.grpc.ClientInterceptors$InterceptorChannel@55242bc1
 ```
+
+## Error
+
+The error in Quarkus dev mode has more details: `io.vertx.core.http.HttpClosedException: Connection was closed (GOAWAY error code = 3)`.
+
+## Workaround
+
+- Downgrade the Quarkus version to `2.16.7.Final` in the server module ([patch file](./server/downgrade-v2.diff))
