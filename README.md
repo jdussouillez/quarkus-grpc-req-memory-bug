@@ -1,4 +1,4 @@
-# quarkus-grpc-test
+# quarkus-grpc-req-memory-bug
 
 Simple project to test stuff with Quarkus and gRPC.
 
