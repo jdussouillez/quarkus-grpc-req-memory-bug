@@ -1,6 +1,5 @@
 package com.github.jdussouillez.server.service;
 
-import com.github.jdussouillez.server.Loggers;
 import io.smallrye.mutiny.Uni;
 import jakarta.enterprise.context.ApplicationScoped;
 import java.nio.charset.StandardCharsets;
@@ -11,7 +10,6 @@ public class PdfService {
 
     public Uni<byte[]> generate(final String data) {
         return Uni.createFrom().item(data)
-            .invoke(d -> Loggers.MAIN.info("Data for generation: {}", d))
             .map(d -> "I'm your PDF content".getBytes(StandardCharsets.UTF_8))
             .onItem()
             .delayIt()
