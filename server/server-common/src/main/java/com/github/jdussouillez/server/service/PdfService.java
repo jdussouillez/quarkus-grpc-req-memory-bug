@@ -10,10 +10,9 @@ import java.time.Duration;
 public class PdfService {
 
     public Uni<byte[]> generate(final String data) {
-        // TODO: generate real PDF content
         return Uni.createFrom().item(data)
             .invoke(d -> Loggers.MAIN.info("Data for generation: {}", d))
-            .map(d -> d.getBytes(StandardCharsets.UTF_8))
+            .map(d -> "I'm your PDF content".getBytes(StandardCharsets.UTF_8))
             .onItem()
             .delayIt()
             .by(Duration.ofSeconds(2L));
