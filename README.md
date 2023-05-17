@@ -14,7 +14,7 @@ cd spec && ./mvnw install && cd ..
 
 ```sh
 cd server && \
-    ./mvnw package --pl server-rpc && \
+    ./mvnw package && \
     java -jar server-rpc/target/quarkus-app/quarkus-run.jar
 ```
 
