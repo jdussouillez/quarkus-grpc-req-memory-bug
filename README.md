@@ -103,6 +103,8 @@ Sending gRPC request of size 5250
 2023-05-17 13:47:48,033 INFO  [io.qua.grp.run.sup.Channels] (Shutdown thread) Shutting down Vert.x gRPC channel io.grpc.ClientInterceptors$InterceptorChannel@55242bc1
 ```
 
+*Note: test files are created using `truncate -s 65450 data_65450_bytes`*
+
 ## Error
 
 The error in Quarkus dev mode has more details: `io.vertx.core.http.HttpClosedException: Connection was closed (GOAWAY error code = 3)`.
