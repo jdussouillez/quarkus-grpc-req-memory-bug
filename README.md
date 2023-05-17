@@ -1,6 +1,6 @@
 # quarkus-grpc-req-memory-bug
 
-Simple project to test stuff with Quarkus and gRPC.
+See Quarkus issue https://github.com/quarkusio/quarkus/issues/33445
 
 ## Build
 
