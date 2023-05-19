@@ -1,6 +1,6 @@
 package com.github.jdussouillez.server.rpc.interceptor;
 
-import jakarta.interceptor.InterceptorBinding;
+import javax.interceptor.InterceptorBinding;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

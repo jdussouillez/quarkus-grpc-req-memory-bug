@@ -1,7 +1,7 @@
 package com.github.jdussouillez.server.rpc.mapper;
 
 import com.github.jdussouillez.api.grpc.PdfRequest;
-import jakarta.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.ApplicationScoped;
 import java.util.Collection;
 import java.util.stream.Collectors;
 

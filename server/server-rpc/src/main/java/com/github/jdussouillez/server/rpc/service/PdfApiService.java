@@ -10,7 +10,7 @@ import com.github.jdussouillez.server.service.PdfService;
 import io.quarkus.grpc.GrpcService;
 import io.smallrye.mutiny.Multi;
 import io.smallrye.mutiny.infrastructure.Infrastructure;
-import jakarta.inject.Inject;
+import javax.inject.Inject;
 
 @GrpcService
 @EnableGrpcErrorManagement

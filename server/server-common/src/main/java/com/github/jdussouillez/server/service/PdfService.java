@@ -1,7 +1,7 @@
 package com.github.jdussouillez.server.service;
 
 import io.smallrye.mutiny.Uni;
-import jakarta.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.ApplicationScoped;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 

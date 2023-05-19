@@ -3,7 +3,7 @@ package com.github.jdussouillez.server.rpc.mapper;
 import com.github.jdussouillez.api.grpc.FileChunk;
 import com.github.jdussouillez.server.utils.ByteUtils;
 import com.google.protobuf.ByteString;
-import jakarta.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.ApplicationScoped;
 import java.util.Collection;
 
 @ApplicationScoped

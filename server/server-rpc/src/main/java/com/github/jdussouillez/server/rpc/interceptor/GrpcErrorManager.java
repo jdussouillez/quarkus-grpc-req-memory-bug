@@ -6,10 +6,10 @@ import io.grpc.Status;
 import io.grpc.StatusException;
 import io.smallrye.mutiny.Multi;
 import io.smallrye.mutiny.Uni;
-import jakarta.annotation.Priority;
-import jakarta.interceptor.AroundInvoke;
-import jakarta.interceptor.Interceptor;
-import jakarta.interceptor.InvocationContext;
+import javax.annotation.Priority;
+import javax.interceptor.AroundInvoke;
+import javax.interceptor.Interceptor;
+import javax.interceptor.InvocationContext;
 
 @Interceptor
 @Priority(2000)
