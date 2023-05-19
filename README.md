@@ -109,6 +109,6 @@ Sending gRPC request of size 5250
 
 The error in Quarkus dev mode has more details: `io.vertx.core.http.HttpClosedException: Connection was closed (GOAWAY error code = 3)`.
 
-The error only seems to happen with a server using Quarkus v3 and a client using Quarkus v2. I found two ways to fix it:
-- Downgrade the Quarkus version to `2.16.7.Final` in the server module ([patch file](./server/downgrade-v2.diff))
-- Upgrade the Quarkus version to `3.0.3.Final` in the client module
+The error only seems to happen with a server using Quarkus v3 and a client using Quarkus v2 (on branch `master`). I found two ways to fix it:
+- Downgrade the Quarkus version to `2.16.7.Final` in the server module (on branch [`server-v2`](https://github.com/jdussouillez/quarkus-grpc-req-memory-bug/tree/server-v2))
+- Upgrade the Quarkus version to `3.0.3.Final` in the client module (on branch [`client-v3`](https://github.com/jdussouillez/quarkus-grpc-req-memory-bug/tree/client-v3))
